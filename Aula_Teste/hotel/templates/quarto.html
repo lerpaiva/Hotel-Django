@@ -1,0 +1,30 @@
+{% extends 'index.html' %}
+
+
+{% block title %}
+HOTEL SENAI
+{% endblock %}
+
+{% block body %}
+
+{% for item in dados_quarto %}
+<div class="container-fluid d-flex mb-5 mt-5 text-center divv">
+        <h1>QUARTO DE {{item.tipo}}</h1>
+        <p>DESCRIÇÃO: {{item.descricao}}</p>
+        <p>QUARTOS DISPONÍVEIS: {{item.disponibilidade}}</p>
+        <p>R$ {{item.valor}}</p>
+        <img style="align-self: center;" width="300" height="250" src="{{item.foto.url}}" alt="Quarto" />
+</div>
+{% endfor %}
+
+<style>
+    .divv{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+    }
+</style>
+
+
+{% endblock %}

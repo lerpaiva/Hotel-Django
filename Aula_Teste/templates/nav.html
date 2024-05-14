@@ -1,0 +1,33 @@
+
+<nav class="navbar cont">
+    <div class="container-fluid">
+        <div>
+            {% for item in dados_hotel %}
+            <img class="imagemm" src="{{item.logo.url}}" alt="Logo">
+            <a class="navbar-brand tittulo">{{item.titulo}}</a>
+            {% endfor %}
+        </div>
+        <div class="d-flex">
+            <a type="button" class="btn btn-dark textt" href="quarto">Quartos</a>
+        </div>
+    </div>
+</nav>
+<style>
+    .imagemm {
+        max-width: 90px;
+        height: 30px;
+        margin-bottom: 5px;
+    }
+    .cont{
+        background-color: black;
+        margin-bottom: 10px;
+    }
+    .tittulo{
+        color:white
+    }
+
+    .textt {
+        font-weight: 300;
+        color: white;
+    }
+</style>
