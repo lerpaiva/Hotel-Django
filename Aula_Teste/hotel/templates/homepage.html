@@ -7,15 +7,50 @@ HOTEL SENAI
 {% endblock %}
 
 {% block body %}
-<ul>
-    <div class="text-center">
-        <div>
-            {% for item in dados_hotel %}
-            <h1>{{item.titulo}}</h1>
-            <p>{{item.descricao}}</p>
-            {% endfor %}
-        </div>
+<div class="container">
+    <ul>
+        <div class="text-center">
 
-    </div>
-</ul>
+            <div>
+                {% for item in dados_hotel %}
+                <h1>{{item.titulo}}</h1>
+                <p>{{item.descricao}}</p>
+                {% endfor %}
+            </div>
+
+        </div>
+    </ul>
+</div>
+
+<style>
+    body,
+    html {
+        margin: 0;
+        padding: 0 0 0 0;
+        right: 0 0 0 0;
+        left: 0 0 0 0;
+        top: 0;
+        bottom: 0;
+        height: 100%;
+        width: 100%;
+    }
+
+    .container {
+        background: url("/static/img/hotell.webp");
+        color: white;
+        width: 100vw;
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-color: rgba(0, 0, 0, 0.5);
+        background-blend-mode: color;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-attachment: fixed;
+        right: 0;
+        left: 0
+    }
+</style>
 {% endblock %}

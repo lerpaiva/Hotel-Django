@@ -1,0 +1,25 @@
+{%extends 'index.html'%}
+{% block title%}
+ Hotel Senai
+{% endblock %}
+
+{% block body %}
+
+<form action="nome" method="post">
+    {% csrf_token %}
+    <!-- {{ form.nome.label }}
+    {{form.nome}}
+    {{ form.sobrenome.label}}
+    {{form.sobrenome}}
+    {{ form.email.label }}
+    {{form.email}}
+    {{form.idade.label}}
+    {{form.idade}}
+    {{form.endereco.label}}
+    {{form.endereco}}
+    {{form.quarto.label}}
+    {{form.quarto}} -->
+    <input type="submit" value="Submit">
+</form>
+
+{% endblock %}

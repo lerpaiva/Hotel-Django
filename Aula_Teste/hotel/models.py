@@ -1,5 +1,5 @@
 from django.db import models
-import datetime
+
 
 # Create your models here.
 
@@ -30,3 +30,13 @@ class Quarto(models.Model):
     def __str__(self):
         return self.tipo
 
+# class Usuario(models.Model):
+#     nome = models.CharField(max_length=20)
+#     sobrenome = models.CharField(max_length=50)
+#     email = models.CharField(max_length=50)
+#     idade = models.IntegerField()
+#     endereco = models.CharField(max_length=60)
+#     quarto = models.CharField(max_length=15, choices=TIPOS_QUARTOS)
+
+#     def __str__(self):
+#         return self.nome
