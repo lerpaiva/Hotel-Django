@@ -1,0 +1,97 @@
+{% extends 'index.html' %}
+{% block title %}
+Hotel Senai
+{% endblock %}
+
+{% block body %}
+
+<style>
+    body{
+        background-color: #250C1D;
+    }
+    /* Estilos para o formulário */
+    form {
+        max-width: 350px;
+        margin: 0 auto;
+    }
+
+    .card {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 15px;
+        margin: 20px auto;
+    }
+
+    .card-title {
+        text-align: center;
+        margin-bottom: 15px;
+        font-size: 20px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 3px;
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="date"] {
+        width: 100%;
+        padding: 6px;
+        margin-bottom: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        font-size: 14px;
+    }
+
+    input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 8px 16px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        width: 100%;
+    }
+
+    input[type="submit"]:hover {
+        background-color: rgba(255, 255, 255, 0.3);
+        border-color: rgb(0, 0, 0);
+    }
+
+</style>
+
+<form action="reserva" class="card" method="post">
+    <h2 class="card-title">Faça sua Reserva</h2>
+    {% csrf_token %}
+    {{ forms }}
+    {{form.nome.label}}:
+    {{ form.nome }}
+    {{form.sobrenome.label}}:
+    {{ form.sobrenome }}
+    {{form.email.label}}:
+    {{ form.email }}
+    {{ form.idade.label}}:
+    {{ form.idade }}
+    {{form.endereco.label}}:
+    {{ form.endereco }}
+    {{form.quarto.label}}:
+    {{ form.quarto }}
+    {{form.data.label}}:
+    {{ form.data }}
+    <input class="mt-3" style=" display: inline-block;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: rgb(0, 0, 0);
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s, border-color 0.3s;" type="submit" value="Enviar">
+</form>
+
+{% endblock %}
