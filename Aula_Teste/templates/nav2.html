@@ -1,14 +1,15 @@
+
 <nav class="navbar cont">
     <div class="container-fluid">
         <div>
             {% for item in dados_hotel %}
             <img class="imagemm" src="{{item.logo.url}}" alt="Logo">
-            <a href="/" class="navbar-brand tittulo josefin-sans">{{item.titulo}}</a>
+            <a href="/" class="navbar-brand tittulo">{{item.titulo}}</a>
             {% endfor %}
         </div>
         <div class="d-flex">
-            <a type="button" class="btn btn-dark textt me-3" href="cadastro">Cadastre-se</a>
-            <a type="button" class="btn btn-dark textt" href="login">Login</a>
+            <a type="button" class="btn btn-dark textt me-3" href="quarto">Quartos</a>
+            <a type="button" class="btn btn-dark textt" href="reserva">Reserva</a>
         </div>
     </div>
 </nav>
@@ -18,20 +19,24 @@
         height: 30px;
         margin-bottom: 5px;
     }
+    .vollkorn-sc-regular {
+  font-family: "Vollkorn SC", serif;
+  font-weight: 400;
+  font-style: normal;
+}
 
-    .josefin-sans{
-        font-family: "Josefin Sans", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 400;
-        font-style: normal;
-    }
+.merriweather-light {
+  font-family: "Merriweather", serif;
+  font-weight: 200;
+  font-style: normal;
+}
 
-    .cont {
+
+    .cont{
         background-color: black;
     }
-
-    .tittulo {
-        color: white
+    .tittulo{
+        color:white
     }
 
     .textt {

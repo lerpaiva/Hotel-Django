@@ -4,11 +4,15 @@
 HOTEL SENAI
 {% endblock %}
 
+{% block nav %}
+{% include 'nav2.html'%}
+{% endblock %}
+
 {% block body %}
 
 <div class="caixa">
-<strong><h1>Quartos para reserva</h1></strong>
-<p>Confira aqui nossos quartos disponíveis para reserva!</p>
+<strong><h1 class="letrinhas">Quartos para reserva</h1></strong>
+<p class="letrinhas">Confira aqui nossos quartos disponíveis para reserva!</p>
 </div>
 
 <div class="container">
@@ -30,8 +34,11 @@ HOTEL SENAI
 </div>
 
 <style>
+    .letrinhas{
+        color: black;
+    }
     body{
-        background-color: #250C1D;
+        background-color: #ffffffd7;
     }
     .card {
         transition: transform 0.5s;

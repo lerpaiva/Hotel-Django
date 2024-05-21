@@ -4,7 +4,7 @@ Hotel Senai
 {% endblock %}
 
 {% block nav %}
-{% include 'nav2.html'%}
+{% include 'nav.html'%}
 {% endblock %}
 
 {% block body %}
@@ -13,6 +13,7 @@ Hotel Senai
     body {
         background-color: #ffffffd7;
     }
+    /* Estilos para o formulário */
     form {
         max-width: 350px;
         margin: 0 auto;
@@ -36,14 +37,13 @@ Hotel Senai
         display: block;
         margin-bottom: 3px;
         font-size: 14px;
+        font-weight: normal; /* Remover o negrito */
     }
 
     input[type="text"],
     input[type="email"],
     input[type="date"],
-    input[type="password"],
-    input[type="number"],
-    select {
+    input[type="password"] { /* Adicionado input[type="password"] */
         width: 100%;
         padding: 6px;
         margin-bottom: 8px;
@@ -54,28 +54,36 @@ Hotel Senai
     }
 
     input[type="submit"] {
-        background-color: #ffffff;
-        color: rgb(0, 0, 0);
+        background-color: #4CAF50;
+        color: white;
         padding: 8px 16px;
-        border-color: black;
-        border-radius: 100px;
+        border: none;
+        border-radius: 4px;
         cursor: pointer;
         font-size: 16px;
         width: 100%;
     }
 
     input[type="submit"]:hover {
-        background-color: #000000a8;
-        color: white;
+        background-color: rgba(255, 255, 255, 0.3);
+        border-color: rgb(0, 0, 0);
     }
 
 </style>
 
-<form action="reserva" class="card" method="post">
-    <h2 class="card-title">Faça sua Reserva</h2>
+<form action="cadastro" class="card" method="post">
+    <h2 class="card-title">Faça seu Cadastro</h2>
     {% csrf_token %}
     {{ form }}
-    <input class="mt-3" type="submit" value="Enviar">
+
+    <input class="mt-3" style=" display: inline-block;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: rgb(0, 0, 0);
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s, border-color 0.3s;" type="submit" value="Enviar">
 </form>
 
 {% endblock %}
