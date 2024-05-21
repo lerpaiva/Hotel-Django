@@ -68,10 +68,18 @@ Hotel Senai
         background-color: rgba(255, 255, 255, 0.3);
         border-color: rgb(0, 0, 0);
     }
+    .alert{
+        color: red;
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
 
 </style>
 
 <form action="login" class="card" method="post">
+    {% if error_message %}
+        <div class="alert">{{error_message}}</div>
+    {% endif %}
     <h2 class="card-title">Faça seu login</h2>
     {% csrf_token %}
     {{ form }}

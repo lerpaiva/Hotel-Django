@@ -12,10 +12,7 @@ def homepage(request):
     context = {}
     dados_hotel = Hotel.objects.all()
     context["dados_hotel"] = dados_hotel
-    if request.user.is_authenticated:
-        return render(request, "homepage2.html", context)
-    else:
-        return render(request, "homepage.html", context)
+    return render (request, 'homepage.html', context)
 
 def quarto(request):
     context = {}
@@ -72,7 +69,7 @@ def login(request):
                 context['error_message'] = "Usuário ou senha incorretos"
     else:
         form = FormLogin()
-        context['form'] = form
+    context['form'] = form
     return render(request, "login.html", context)
 
 def reserva(request):
